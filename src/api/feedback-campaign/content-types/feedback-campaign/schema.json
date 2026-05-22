@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "feedback-campaigns",
+  "info": {
+    "singularName": "feedback-campaign",
+    "pluralName": "feedback-campaigns",
+    "displayName": "Feedback Campaign"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "startDate": {
+      "type": "datetime"
+    },
+    "endDate": {
+      "type": "datetime"
+    },
+    "semester": {
+      "type": "integer"
+    },
+    "feedbacks": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::feedback.feedback",
+      "mappedBy": "feedback_campaign"
+    }
+  }
+}

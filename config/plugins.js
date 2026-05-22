@@ -1,1 +1,2 @@
-module.exports = () => ({});
+// config/plugins.js
+module.exports = {};

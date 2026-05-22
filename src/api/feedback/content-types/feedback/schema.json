@@ -1,0 +1,46 @@
+{
+  "kind": "collectionType",
+  "collectionName": "feedbacks",
+  "info": {
+    "singularName": "feedback",
+    "pluralName": "feedbacks",
+    "displayName": "Feedback"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "subject": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::subject.subject",
+      "inversedBy": "feedbacks"
+    },
+    "suggestions": {
+      "type": "text"
+    },
+    "feedback_campaign": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::feedback-campaign.feedback-campaign",
+      "inversedBy": "feedbacks"
+    },
+    "teacher": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::teacher.teacher",
+      "inversedBy": "feedbacks"
+    },
+    "rating": {
+      "type": "integer",
+      "required": true
+    },
+    "work": {
+      "type": "text"
+    },
+    "topic": {
+      "type": "string"
+    }
+  }
+}
