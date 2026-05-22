@@ -599,6 +599,9 @@ export interface ApiTeacherTeacher extends Struct.CollectionTypeSchema {
     > &
       Schema.Attribute.Private;
     name: Schema.Attribute.String & Schema.Attribute.Required;
+    profileImage: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    >;
     publishedAt: Schema.Attribute.DateTime;
     subjects: Schema.Attribute.Relation<'manyToMany', 'api::subject.subject'>;
     updatedAt: Schema.Attribute.DateTime;
