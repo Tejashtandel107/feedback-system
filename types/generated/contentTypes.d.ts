@@ -588,6 +588,7 @@ export interface ApiTeacherTeacher extends Struct.CollectionTypeSchema {
     draftAndPublish: false;
   };
   attributes: {
+    averageRating: Schema.Attribute.Decimal;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -604,6 +605,7 @@ export interface ApiTeacherTeacher extends Struct.CollectionTypeSchema {
     >;
     publishedAt: Schema.Attribute.DateTime;
     subjects: Schema.Attribute.Relation<'manyToMany', 'api::subject.subject'>;
+    totalFeedbacks: Schema.Attribute.Integer;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
